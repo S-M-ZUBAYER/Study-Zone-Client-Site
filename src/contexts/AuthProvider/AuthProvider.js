@@ -11,7 +11,14 @@ export const AuthContext = createContext()
 const AuthProvider = ({ children }) => {
     const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(true)
+
     const LogInWithGoogle = (provider) => {
+        return signInWithPopup(auth, provider)
+    }
+    const logInWithGithub = (provider) => {
+        return signInWithPopup(auth, provider)
+    }
+    const logInWithFacebook = (provider) => {
         return signInWithPopup(auth, provider)
     }
     const registerWithEmail = (email, password) => {
@@ -50,6 +57,8 @@ const AuthProvider = ({ children }) => {
         user,
         loading,
         LogInWithGoogle,
+        logInWithGithub,
+        logInWithFacebook,
         updateUserinfo,
         logOut,
         registerWithEmail,
