@@ -1,8 +1,11 @@
 import React from 'react';
+import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import img from '../../../assets/company_logo.ico'
+import { AuthContext } from '../../../contexts/AuthProvider/AuthProvider';
 
 const Navbar = () => {
+    const { user, logOut } = useContext(AuthContext);
     return (
         <div>
             <div className="navbar bg-base-100">
@@ -60,8 +63,15 @@ const Navbar = () => {
                     </label>
                 </div>
                 <div className="navbar-end">
-                    <img className="w-8 h-8 rounded-xl mr-2" src={img} ></img>
-                    <Link to='/login' className="btn-small p-2 rounded-lg bg-lime-300 text-black lg:mr-3">Log In</Link>
+                    {user?.uid ?
+                        <>
+                            <img title={user.displayName} className="w-8 h-8 rounded-xl mr-2" src={user?.photoURL} ></img>
+                            <button onClick={() => logOut()} className="btn-small p-2 rounded-lg bg-yellow-400 text-black lg:mr-3">Log Out</button>
+                        </> :
+                        <Link to='/login' className="btn-small p-2 rounded-lg bg-lime-300 text-black lg:mr-3">Log In</Link>
+                    }
+
+
                 </div>
             </div>
 

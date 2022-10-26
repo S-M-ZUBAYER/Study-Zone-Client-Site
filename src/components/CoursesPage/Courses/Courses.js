@@ -1,5 +1,5 @@
 import React from 'react';
-import { useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
 import CourseCard from '../../HomePage/CourseCard/CourseCard';
 import CourseCategories from '../CourseCategories/CourseCategories';
 import CourseHeading from '../CourseHeading/CourseHeading';
@@ -15,7 +15,7 @@ const Courses = () => {
                 </div>
                 <div className="lg:col-span-2 md:col-span-1">
                     <div className="my-12 mx-10 grid gap-2 sm:grid-cols-1 lg:grid-cols-2">
-                        {courses.map(course => <CourseCard key={course.id} course={course}></CourseCard>)}
+                        {courses.map(course => <Link to={`/courses/${course.id}`}><CourseCard key={course.id} course={course}></CourseCard></Link>)}
                     </div>
                 </div>
             </div>

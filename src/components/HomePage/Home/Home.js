@@ -1,18 +1,17 @@
 import React from 'react';
-import { useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
 import CourseCard from '../CourseCard/CourseCard';
 import Heading from '../Heading/Heading';
 
 const Home = () => {
     const courses = useLoaderData();
-    console.log(courses)
     return (
         <div>
             <Heading></Heading>
-            <h2 className="font-bold text-3xl mt-12 "><span className="text-lime-500">Courses</span> We Offer!!!</h2>
-            <p className="mx-10 font-medium mt-3">We understand that you need flexible course options to gather knowledge, career, and other life commitments. We offer a variety of ways for you to take courses so you can find the option that works best with your schedule, including courses that you got it in online. </p>
+            <h2 className="font-bold text-3xl mt-12 text-center"><span className="text-lime-500">Courses</span> We Offer!!!</h2>
+            <p className="mx-10 font-medium text-center mt-3">We understand that you need flexible course options to gather knowledge, career, and other life commitments. We offer a variety of ways for you to take courses so you can find the option that works best with your schedule, including courses that you got it in online. </p>
             <div className="my-12 mx-10 grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
-                {courses.map(course => <CourseCard key={course.id} course={course}></CourseCard>)}
+                {courses.map(course => <Link to={`/courses/:${course.id}`}><CourseCard key={course.id} course={course}></CourseCard></Link>)}
             </div>
             <div className="flex flex-col justify-center items-center h-screen bg-gradient-to-t from-black via-purple-900 to-violet-600">
                 <div className=" md:w-auto w-[90%] p-8 rounded-xl  m-4 flex flex-col items-center shadow-lg border border-gray-400 opacity-90 ">

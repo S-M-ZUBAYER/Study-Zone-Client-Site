@@ -7,6 +7,7 @@ import Heading from '../../components/HomePage/Heading/Heading';
 import Home from '../../components/HomePage/Home/Home';
 import Main from '../../components/Main/Main';
 import ErrorPage from '../../components/SharePages/ErrorPage/ErrorPage';
+import CourseDetails from '../../CourseDetailsPage/CourseDetails/CourseDetails';
 
 
 export const routes = createBrowserRouter([
@@ -40,6 +41,11 @@ export const routes = createBrowserRouter([
             {
                 path: '/header',
                 element: <Heading></Heading>
+            },
+            {
+                path: '/courses/:id',
+                loader: ({ params }) => fetch(`http://localhost:5000/courses/${params.id}`),
+                element: <CourseDetails></CourseDetails>
             }
         ]
     }

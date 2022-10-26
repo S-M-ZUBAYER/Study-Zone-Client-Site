@@ -1,9 +1,12 @@
 import React from 'react';
 
 const CourseCard = ({ course }) => {
+    const showDetails = () => {
+        console.log(id)
+    }
     const { id, img, name, author_name, author_img, last_update, description } = course;
     return (
-        <article className="max-w-md mx-auto mt-4 bg-cyan-900 shadow-lg border rounded-md duration-300 hover:shadow-sm" key={id}>
+        <article onClick={showDetails} className="max-w-md mx-auto mt-4 bg-cyan-900 shadow-lg border rounded-md duration-300 hover:shadow-sm" key={id}>
 
             <img src={img} loading="lazy" alt={name} className="w-full img-fluid h-48 rounded-t-md" />
 
