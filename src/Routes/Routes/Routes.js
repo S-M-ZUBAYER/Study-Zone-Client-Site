@@ -2,6 +2,7 @@ import React from 'react';
 import { createBrowserRouter } from 'react-router-dom';
 import LogIn from '../../components/AuthPages/LogIn/LogIn';
 import Register from '../../components/AuthPages/Register/Register';
+import Courses from '../../components/CoursesPage/Courses/Courses';
 import Heading from '../../components/HomePage/Heading/Heading';
 import Home from '../../components/HomePage/Home/Home';
 import Main from '../../components/Main/Main';
@@ -22,6 +23,11 @@ export const routes = createBrowserRouter([
                 path: '/home',
                 loader: () => fetch('http://localhost:5000/courses'),
                 element: <Home></Home>
+            },
+            {
+                path: '/courses',
+                loader: () => fetch('http://localhost:5000/courses'),
+                element: <Courses></Courses>
             },
             {
                 path: '/login',
