@@ -52,6 +52,13 @@ const Navbar = () => {
                         <li><Link to='contact'>Contact</Link></li>
                     </ul>
                 </div>
+                <div className="form-control flex justify-center ">
+                    <label className="label cursor-pointer">
+                        <span className="label-text"><small>light</small></span>
+                        <input type="checkbox" className="toggle" checked />
+                        <span className="label-text"><small>dark</small></span>
+                    </label>
+                </div>
                 <div className="navbar-end">
                     <img className="w-8 h-8 rounded-xl mr-2" src={img} ></img>
                     <Link to='/login' className="btn-small p-2 rounded-lg bg-lime-300 text-black lg:mr-3">Log In</Link>
