@@ -13,7 +13,7 @@ const Register = () => {
     const [error, setError] = useState('');
     const [accepted, setAccepted] = useState(false);
     const [seccess, setSuccess] = useState(false)
-    const { registerWithEmail, LogInWithGoogle, logInWithGithub, logInWithFacebook } = useContext(AuthContext);
+    const { registerWithEmail, LogInWithGoogle, logInWithGithub, logInWithFacebook, updateUserinfo } = useContext(AuthContext);
     const googleProvider = new GoogleAuthProvider();
     const githubProvider = new GithubAuthProvider();
     const facebookProvider = new FacebookAuthProvider();
@@ -26,7 +26,6 @@ const Register = () => {
         const photoURL = form.photoURL.value;
         const password = form.password.value;
         const confirmPassword = form.conPassword.value;
-        console.log(email, password, name, photoURL, confirmPassword);
         if (password !== confirmPassword) {
             setError("password & confirmPassword didn't match");
             return;
@@ -51,16 +50,27 @@ const Register = () => {
         registerWithEmail(email, password)
             .then(result => {
                 const user = result.user;
-                console.log(user);
+                console.log(user)
                 form.reset();
                 setError('')
                 setSuccess(true);
+                handlerUpdateUserInfo(name, photoURL);
                 toast.success('sucess')
             })
             .catch(error => {
                 setError(error.message);
             })
 
+    }
+    const handlerUpdateUserInfo = (name, photoURL) => {
+        const profile = {
+            displayName: name,
+            photoURL: photoURL
+
+        }
+        updateUserinfo(profile)
+            .then(() => { })
+            .catch((error) => { setError(error) })
     }
 
     // const handleToCheck = (event) => {

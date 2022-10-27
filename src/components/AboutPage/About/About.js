@@ -11,10 +11,7 @@ const About = () => {
                         </h2>
 
                         <p className="text-gring-offset-warm-gray-500 mx-auto mt-4 max-w-lg">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur
-                            praesentium natus sapiente commodi. Aliquid sunt tempore iste
-                            repellendus explicabo dignissimos placeat, autem harum dolore
-                            reprehenderit quis! Quo totam dignissimos earum.
+                            Your small words can motivate and encourage your students, especially those who are lacking behind, so keep telling them to improve, and they can do it. You can use the comments below to motivate students in your online classes.
                         </p>
                     </div>
 
@@ -36,8 +33,7 @@ const About = () => {
                                     Digital Marketing at Studio
                                 </p>
                                 <p className="mt-4 text-sm text-gray-500">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt
-                                    voluptatem alias ut provident sapiente repellendus.
+                                    Often students can’t give their best, it is important to talk and enquire about the problem they are facing and where they are lacking. And while you do this you need to be very particular with the words. Here are some good comments for improvement and assistance for students.
                                 </p>
 
                                 <div className="mt-8 flex justify-center gap-0.5 text-green-500">
@@ -110,8 +106,7 @@ const About = () => {
                                     Digital Marketing at Studio
                                 </p>
                                 <p className="mt-4 text-sm text-gray-500">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt
-                                    voluptatem alias ut provident sapiente repellendus.
+                                    Often students can’t give their best, it is important to talk and enquire about the problem they are facing and where they are lacking. And while you do this you need to be very particular with the words. Here are some good comments for improvement and assistance for students.
                                 </p>
 
                                 <div className="mt-8 flex justify-center gap-0.5 text-green-500">
@@ -184,8 +179,7 @@ const About = () => {
                                     Digital Marketing at Studio
                                 </p>
                                 <p className="mt-4 text-sm text-gray-500">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt
-                                    voluptatem alias ut provident sapiente repellendus.
+                                    Often students can’t give their best, it is important to talk and enquire about the problem they are facing and where they are lacking. And while you do this you need to be very particular with the words. Here are some good comments for improvement and assistance for students.
                                 </p>
 
                                 <div className="mt-8 flex justify-center gap-0.5 text-green-500">
@@ -258,8 +252,7 @@ const About = () => {
                                     Digital Marketing at Studio
                                 </p>
                                 <p className="mt-4 text-sm text-gray-500">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt
-                                    voluptatem alias ut provident sapiente repellendus.
+                                    Often students can’t give their best, it is important to talk and enquire about the problem they are facing and where they are lacking. And while you do this you need to be very particular with the words. Here are some good comments for improvement and assistance for students.
                                 </p>
 
                                 <div className="mt-8 flex justify-center gap-0.5 text-green-500">
@@ -332,8 +325,7 @@ const About = () => {
                                     Digital Marketing at Studio
                                 </p>
                                 <p className="mt-4 text-sm text-gray-500">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt
-                                    voluptatem alias ut provident sapiente repellendus.
+                                    Often students can’t give their best, it is important to talk and enquire about the problem they are facing and where they are lacking. And while you do this you need to be very particular with the words. Here are some good comments for improvement and assistance for students.
                                 </p>
 
                                 <div className="mt-8 flex justify-center gap-0.5 text-green-500">
@@ -406,8 +398,7 @@ const About = () => {
                                     Digital Marketing at Studio
                                 </p>
                                 <p className="mt-4 text-sm text-gray-500">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt
-                                    voluptatem alias ut provident sapiente repellendus.
+                                    Often students can’t give their best, it is important to talk and enquire about the problem they are facing and where they are lacking. And while you do this you need to be very particular with the words. Here are some good comments for improvement and assistance for students.
                                 </p>
 
                                 <div className="mt-8 flex justify-center gap-0.5 text-green-500">

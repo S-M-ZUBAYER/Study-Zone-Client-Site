@@ -59,8 +59,8 @@ const Footer = () => {
                         <p className="space-x-3"> <i className="fa fa-home text-[17px]"></i><strong
                             className="text-[#8b8b8b] text-[15px] tracking-wide">Our Company</strong> </p>
                         <div className="leading-7">
-                            <p className=""> NH-70 Chandigarh-Ludhiana Highway, <br /> Mohali, Punjab (INDIA) <br /> General Helpline
-                                No:+91 987-6543-210 </p>
+                            <p className=""> NH-70 Chandigarh-Ludhiana Highway, <br /> Kushtia , Dhaka (Bangldesh) <br /> General Helpline
+                                No:+880 1304979278 </p>
                         </div>
                         <div className="leading-7 mt-4 text-[15px] font-[500]">
                             <p className="space-x-3 hover:text-[#cacaca]"> <i className="fa fa-phone text-[17px]"></i> <Link to="#"> 1800
@@ -71,7 +71,7 @@ const Footer = () => {
                                 to="/">994694700&nbsp;( <span className="text-[13px] font-[500]">Technical Support: CUCET</span> )
                             </Link> </p>
                             <p className="space-x-3 hover:text-[#cacaca]"> <i className="fa fa-envelope text-[16px]"></i> <Link to="#">
-                                admin@Company.in</Link> </p>
+                                smzubayer9004@gmail.com</Link> </p>
                         </div>
                     </div>
                 </div>

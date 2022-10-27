@@ -21,8 +21,7 @@ const LogIn = () => {
         event.preventDefault();
         const form = event.target;
         const email = form.email.value;
-        const password = form.password.value;
-        console.log(email, password);
+        const password = form.password.value;;
         signIn(email, password)
             .then(result => {
                 const user = result.user;
@@ -30,7 +29,7 @@ const LogIn = () => {
                 form.reset();
                 setError('');
                 toast.success('Log In successfully')
-                if (user.emailVerified) {
+                if (user?.uid) {
                     navigate(from, { replace: true });
                 }
                 else {
@@ -39,7 +38,6 @@ const LogIn = () => {
 
             })
             .catch(error => {
-                console.log(error);
                 setError(error.message);
             })
             .finally(() => {
@@ -53,6 +51,12 @@ const LogIn = () => {
                 const user = result.user;
                 console.log(user)
                 toast.success('Log In successfully')
+                if (user?.uid) {
+                    navigate(from, { replace: true });
+                }
+                else {
+                    // toast.error("Your Email wasn't verified. please verify first!!!")
+                }
             })
             .catch(error => console.error(error))
     }
@@ -62,6 +66,12 @@ const LogIn = () => {
                 const user = result.user;
                 console.log(user)
                 toast.success('Log In successfully')
+                if (user.uid) {
+                    navigate(from, { replace: true });
+                }
+                else {
+                    // toast.error("Your Email wasn't verified. please verify first!!!")
+                }
             })
             .catch(error => console.error(error))
     }
@@ -71,6 +81,12 @@ const LogIn = () => {
                 const user = result.user;
                 console.log(user);
                 toast.success('Log In successfully')
+                if (user.uid) {
+                    navigate(from, { replace: true });
+                }
+                else {
+                    // toast.error("Your Email wasn't verified. please verify first!!!")
+                }
 
             })
             .catch(error => console.error(error))

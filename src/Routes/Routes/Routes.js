@@ -4,6 +4,7 @@ import About from '../../components/AboutPage/About/About';
 import LogIn from '../../components/AuthPages/LogIn/LogIn';
 import Register from '../../components/AuthPages/Register/Register';
 import Blog from '../../components/BlogPage/Blog';
+import CheckOut from '../../components/CheckOutPage/CheckOut';
 import Contact from '../../components/ContactPage/Contact';
 import Courses from '../../components/CoursesPage/Courses/Courses';
 import FAQ from '../../components/FAQPage/FAQ/FAQ';
@@ -12,6 +13,7 @@ import Home from '../../components/HomePage/Home/Home';
 import Main from '../../components/Main/Main';
 import ErrorPage from '../../components/SharePages/ErrorPage/ErrorPage';
 import CourseDetails from '../../CourseDetailsPage/CourseDetails/CourseDetails';
+import PrivateRoutes from '../PrivateRoutes/PrivateRoutes';
 
 
 export const routes = createBrowserRouter([
@@ -62,6 +64,12 @@ export const routes = createBrowserRouter([
                 path: '/courses/:id',
                 loader: ({ params }) => fetch(`http://localhost:5000/courses/${params.id}`),
                 element: <CourseDetails></CourseDetails>
+            },
+            {
+                path: '/items/:course_id',
+                loader: ({ params }) => fetch(`http://localhost:5000/items/${params.course_id}`),
+                element: <PrivateRoutes><CheckOut></CheckOut></PrivateRoutes>,
+
             }
         ]
     }

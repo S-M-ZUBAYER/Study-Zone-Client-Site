@@ -2,10 +2,11 @@ import React from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
 import { FaStar, FaStarHalfAlt } from 'react-icons/fa';
 import InstructorCard from '../../components/InstructorsCard/InstructorCard';
+import DownloadBtn from '../DownloadBtn/DownloadBtn';
 
 const CourseDetails = () => {
     const course = useLoaderData();
-    const { name, Duration, author_name, img, last_update, rating, Enrolled, price, reviews, description, author_img, quality, requirements } = course;
+    const { name, Duration, author_name, img, last_update, rating, Enrolled, price, reviews, description, author_img, quality, requirements, course_id } = course;
     const descriptionPera = description.split('$');
     const eachRequirements = requirements.split('$');
     return (
@@ -13,6 +14,7 @@ const CourseDetails = () => {
             <section
                 className="relative bg-[url(https://wallpapercave.com/wp/wp6941054.jpg)] bg-cover bg-center bg-no-repeat"
             >
+
                 <div
                     className="absolute inset-0 bg-white/75 sm:bg-transparent sm:bg-gradient-to-r sm:from-white/95 sm:to-white/25"
                 ></div>
@@ -21,6 +23,7 @@ const CourseDetails = () => {
                     className="relative mx-auto max-w-screen-xl px-4 py-32 sm:px-6 lg:flex lg:h-screen lg:items-center lg:px-8"
                 >
                     <div className="max-w-xl text-center sm:text-left">
+
                         <h1 className="text-3xl font-extrabold text-lime-700 sm:text-5xl">
                             Welcome To Our
 
@@ -64,6 +67,12 @@ const CourseDetails = () => {
                         >
                             10% Offer
                         </strong>
+                        <strong
+                            className="absolute top-4 right-0 py-1.5 px-3 text-xs uppercase tracking-wider text-black"
+                        >
+                            <DownloadBtn></DownloadBtn>
+                        </strong>
+
 
                         <div className="relative text-center">
                             <h3
@@ -105,6 +114,12 @@ const CourseDetails = () => {
                     </div>
                 </div>
             </div>
+            <Link
+                className="flex items-center justify-center rounded-xl mx-10 border-4 border-black bg-gradient-to-t from-red-400 to-amber-200 px-8 py-4 mt-5 font-bold shadow-[6px_6px_0_0_#000] transition hover:shadow-none focus:outline-none focus:ring active:bg-pink-50"
+                to={`/items/${course_id}`}
+            >
+                Get Premium Access <span aria-hidden="true" className="ml-1.5" role="img">🤔</span>
+            </Link>
         </div>
     );
 };
