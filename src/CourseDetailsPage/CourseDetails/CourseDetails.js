@@ -74,7 +74,7 @@ const CourseDetails = () => {
                         <strong
                             className="absolute top-4 right-0 py-1.5 px-3 text-xs uppercase tracking-wider text-black"
                         >
-                            <ReactPrint trigger={() => <button>Download</button>} content={() => ref.current} />
+                            <ReactPrint trigger={() => <button className="bg-red-300 py-2 px-3 rounded-lg text-lg">Download pdf</button>} content={() => ref.current} />
                         </strong>
 
 
