@@ -1,7 +1,7 @@
 import React, { createContext, useEffect, useState } from 'react';
 import { createUserWithEmailAndPassword, getAuth, onAuthStateChanged, sendEmailVerification, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from 'firebase/auth'
 import app from '../../firebase/firebase.config';
-// import toast from 'react-hot-toast';
+import toast from 'react-hot-toast';
 
 
 const auth = getAuth(app);
@@ -42,12 +42,7 @@ const AuthProvider = ({ children }) => {
 
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
-            if (currentUser === null || currentUser.emailVerified) {
-                setUser(currentUser);
-            }
-            else {
-                // toast.error('Verified your email first')
-            }
+            setUser(currentUser);
             setLoading(false)
         })
         return () => unsubscribe();

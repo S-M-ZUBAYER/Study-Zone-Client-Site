@@ -3,7 +3,7 @@ import React from 'react';
 const FAQ = () => {
     return (
         <div>
-            <section class="bg-white dark:bg-gray-900">
+            <section class="bg-white dark:bg-gray-900 bg-gradient-to-t from-black via-slate-800 to-gray-900">
                 <div class="container max-w-4xl px-6 py-10 mx-auto">
                     <h1 class="text-4xl font-semibold text-center text-gray-800 dark:text-white">Frequently asked questions</h1>
 

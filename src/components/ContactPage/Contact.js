@@ -3,13 +3,13 @@ import React from 'react';
 const Contact = () => {
     return (
         <div>
-            <section class="min-h-screen bg-white dark:bg-gray-900">
+            <section class="min-h-screen text-slate-300 bg-white dark:bg-gray-900 bg-gradient-to-t from-black via-slate-800 to-gray-900">
                 <div class="container px-6 py-10 mx-auto">
                     <div class="lg:flex lg:items-center lg:-mx-10">
                         <div class="lg:w-1/2 lg:mx-10">
-                            <h1 class="text-3xl font-semibold text-gray-800 capitalize dark:text-white lg:text-5xl">Let’s talk</h1>
+                            <h1 class="text-3xl font-semibold text-gray-400 capitalize dark:text-white lg:text-5xl">Let’s talk</h1>
 
-                            <p class="mt-4 text-gray-500 dark:text-gray-400">
+                            <p class="mt-4 text-gray-300 dark:text-gray-400">
                                 Ask us everything and we would love
                                 to hear from you
                             </p>

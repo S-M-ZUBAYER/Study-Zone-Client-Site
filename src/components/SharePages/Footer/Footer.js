@@ -1,4 +1,6 @@
 import React from 'react';
+import { FaGoogle, FaTelegramPlane, FaInstagram, FaYoutube, FaTwitter, FaLinkedinIn, FaFacebook } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
     return (
@@ -33,10 +35,10 @@ const Footer = () => {
                                     className="text-white pb-[34px] font-sans uppercase font-normal tracking-wider underline underline-offset-[12px] decoration-red-500/90">
                                     About </h1> <span className="text-white font-sans uppercase font-normal tracking-wider">exam</span>
                             </div>
-                            <p className=""> <a className="hover:text-[#cacaca]" href="#">Apply</a> </p>
-                            <p className=""> <a className="hover:text-[#cacaca]" href="#">Eligibility</a> </p>
-                            <p className=""> <a className="hover:text-[#cacaca]" href="#">Application Process</a> </p>
-                            <p className=""> <a className="hover:text-[#cacaca]" href="#">Syllabus</a> </p>
+                            <p className=""> <Link className="hover:text-[#cacaca]" to="/">Apply</Link> </p>
+                            <p className=""> <Link className="hover:text-[#cacaca]" to="/">Eligibility</Link> </p>
+                            <p className=""> <Link className="hover:text-[#cacaca]" to="/">Application Process</Link> </p>
+                            <p className=""> <Link className="hover:text-[#cacaca]" to="/">Syllabus</Link> </p>
                         </div>
                         <div
                             className="text-[#747474] text-[15px] font-[550] leading-6 tracking-wide mt-9 md:order-5 md:pt-32 lg:pb-28">
@@ -45,7 +47,7 @@ const Footer = () => {
                                     className="text-white pb-[38px] font-sans uppercase font-normal tracking-wider underline underline-offset-[12px] decoration-red-500/90">
                                     suppor </h1> <span className="text-white font-sans uppercase font-normal tracking-wider">t</span>
                             </div>
-                            <p className=""> <a href="#" className="hover:text-[#cacaca]">FAQ's</a> </p>
+                            <p className=""> <Link to="/" className="hover:text-[#cacaca]">FAQ's</Link> </p>
                         </div>
                     </div>
                     <div className="text-[#797878] text-[15px] font-[550] leading-6 tracking-wide md:order-4 lg:">
@@ -61,15 +63,15 @@ const Footer = () => {
                                 No:+91 987-6543-210 </p>
                         </div>
                         <div className="leading-7 mt-4 text-[15px] font-[500]">
-                            <p className="space-x-3 hover:text-[#cacaca]"> <i className="fa fa-phone text-[17px]"></i> <a href="#"> 1800
-                                1800 88800</a> </p>
-                            <p className="space-x-3 hover:text-[#cacaca]"> <i className="fa fa-phone text-[17px]"></i> <a
-                                href="#">9946948000S ( <span className="text-[13px] font-[500]">General Enquiry</span> )</a> </p>
-                            <p className="space-x-3 hover:text-[#cacaca]"> <i className="fa fa-phone text-[17px]"></i> <a
-                                href="#">994694700&nbsp;( <span className="text-[13px] font-[500]">Technical Support: CUCET</span> )
-                            </a> </p>
-                            <p className="space-x-3 hover:text-[#cacaca]"> <i className="fa fa-envelope text-[16px]"></i> <a href="#">
-                                admin@Company.in</a> </p>
+                            <p className="space-x-3 hover:text-[#cacaca]"> <i className="fa fa-phone text-[17px]"></i> <Link to="#"> 1800
+                                1800 88800</Link> </p>
+                            <p className="space-x-3 hover:text-[#cacaca]"> <i className="fa fa-phone text-[17px]"></i> <Link
+                                to="/">9946948000S ( <span className="text-[13px] font-[500]">General Enquiry</span> )</Link> </p>
+                            <p className="space-x-3 hover:text-[#cacaca]"> <i className="fa fa-phone text-[17px]"></i> <Link
+                                to="/">994694700&nbsp;( <span className="text-[13px] font-[500]">Technical Support: CUCET</span> )
+                            </Link> </p>
+                            <p className="space-x-3 hover:text-[#cacaca]"> <i className="fa fa-envelope text-[16px]"></i> <Link to="#">
+                                admin@Company.in</Link> </p>
                         </div>
                     </div>
                 </div>
@@ -78,31 +80,23 @@ const Footer = () => {
                     <p>&nbsp;</p>
                 </div>
                 <div className="flex justify-center mb-4 md:mb-1 text-[#afafaf] text-center text-xl space-x-3">
-                    <p> <a href="#"
-                        className="w-10 h-10 bg-[#474747] hover:text-blue-500 transform ease-in-out duration-500 hover:bg-white rounded-full inline-block pt-[7px]"><i
-                            className="fa fa-facebook"></i></a> </p>
-                    <p> <a href="#"
-                        className="w-10 h-10 bg-[#474747] hover:text-blue-500 transform ease-in-out duration-500 hover:bg-white rounded-full inline-block pt-[6px]"><i
-                            className="fa fa-twitter"></i></a> </p>
-                    <p> <a href="#"
-                        className="w-10 h-10 bg-[#474747] hover:text-blue-500 transform ease-in-out duration-500 hover:bg-white rounded-full inline-block pt-[6px]"><i
-                            className="fa fa-instagram"></i></a> </p>
-                    <p> <a href="#"
-                        className="w-10 h-10 bg-[#474747] hover:text-blue-500 transform ease-in-out duration-500 hover:bg-white rounded-full inline-block pt-[6px]"><i
-                            className="fa fa-linkedin"></i></a> </p>
-                    <p> <a href="#"
-                        className="w-10 h-10 bg-[#474747] hover:text-blue-500 transform ease-in-out duration-500 hover:bg-white rounded-full inline-block pt-[6px]"><i
-                            className="fa fa-youtube"></i></a> </p>
-                    <p> <a href="#"
-                        className="w-10 h-10 bg-[#474747] hover:text-blue-500 transform ease-in-out duration-500 hover:bg-white rounded-full inline-block pt-[6px]"><i
-                            className="fa fa-pinterest"></i></a> </p>
-                    <p> <a href="#"
-                        className="w-10 h-10 bg-[#474747] hover:text-blue-500 transform ease-in-out duration-500 hover:bg-white rounded-full inline-block pt-[6px]"><i
-                            className="fa fa-telegram"></i></a> </p>
+                    <p> <Link to="/"
+                        className="w-10 h-10 bg-[#474747] hover:text-blue-500 transform ease-in-out duration-500 hover:bg-white rounded-full inline-block pl-2 pt-[7px]"><FaFacebook></FaFacebook></Link> </p>
+                    <p> <Link to="/"
+                        className="w-10 h-10 bg-[#474747] hover:text-blue-500 transform ease-in-out duration-500 hover:bg-white rounded-full inline-block pl-2 pt-2"><FaTwitter></FaTwitter></Link> </p>
+                    <p> <Link to="/"
+                        className="w-10 h-10 bg-[#474747] hover:text-blue-500 transform ease-in-out duration-500 hover:bg-white rounded-full inline-block pl-2 pt-2"><FaInstagram></FaInstagram></Link> </p>
+                    <p> <Link to="/"
+                        className="w-10 h-10 bg-[#474747] hover:text-blue-500 transform ease-in-out duration-500 hover:bg-white rounded-full inline-block pl-2 pt-2"><FaLinkedinIn></FaLinkedinIn></Link> </p>
+                    <p> <Link to="/"
+                        className="w-10 h-10 bg-[#474747] hover:text-blue-500 transform ease-in-out duration-500 hover:bg-white rounded-full inline-block pl-2 pt-2"><FaYoutube></FaYoutube></Link> </p>
+                    <p> <Link to="/"
+                        className="w-10 h-10 bg-[#474747] hover:text-blue-500 transform ease-in-out duration-500 hover:bg-white rounded-full inline-block pl-2 pt-2">
+                        <FaGoogle></FaGoogle></Link> </p>
+                    <p> <Link to="/"
+                        className="w-10 h-10 bg-[#474747] hover:text-blue-500 transform ease-in-out duration-500 hover:bg-white rounded-full inline-block pl-2 pt-2"><FaTelegramPlane></FaTelegramPlane></Link> </p>
                 </div>
             </div>
-            {/* <script src="https://cdn.tailwindcss.com"></script>
-            <script src="https://use.fontawesome.com/03f8a0ebd4.js"></script> */}
         </div>
     );
 };

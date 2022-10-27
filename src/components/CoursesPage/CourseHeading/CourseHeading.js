@@ -4,7 +4,7 @@ const CourseHeading = () => {
 
     return (
         <div>
-            <div className="flex justify-center relative bg-[url(https://images.idgesg.net/images/article/2019/11/ai_artificial_intelligence_ml_machine_learning_vector_by_kohb_gettyimages_1146634284-100817775-large.jpg)] bg-cover bg-center bg-no-repeat border-r-gray-800 bg-opacity-75">
+            <div className="flex justify-center relative py-16 bg-[url(https://images.idgesg.net/images/article/2019/11/ai_artificial_intelligence_ml_machine_learning_vector_by_kohb_gettyimages_1146634284-100817775-large.jpg)] bg-cover bg-center bg-no-repeat border-r-gray-800 bg-opacity-50">
                 <div className="flex flex-col items-center justify-center">
                     <div className="flex flex-col  max-w-7xl justify-center items-center space-y-3 w-full ">
                         <div className="flex flex-col   md:items-start items-center justify-center  space-y-3 px-8 text-center ">

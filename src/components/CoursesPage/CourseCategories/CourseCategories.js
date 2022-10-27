@@ -5,8 +5,8 @@ import Items from '../Items/Items';
 const CourseCategories = () => {
     const courses = useLoaderData();
     return (
-        <div className="mt-10">
-            <h1 className="text-3xl font-bold text-red-300"><span className="text-green-500">Available</span> Courses</h1>
+        <div className="mt-20 ml-4 sticky top-20">
+            <h1 className="text-3xl font-bold text-center text-red-300"><span className="text-green-500">Available</span> Courses</h1>
             {
                 courses.map(course => <Link to={`/courses/:${course.id}`}><Items key={course.id} course={course}></Items></Link>)
             }

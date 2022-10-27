@@ -7,8 +7,8 @@ import { AuthContext } from '../../../contexts/AuthProvider/AuthProvider';
 const Navbar = () => {
     const { user, logOut } = useContext(AuthContext);
     return (
-        <div>
-            <div className="navbar bg-base-100">
+        <div className="sticky top-0 z-40">
+            <div className="navbar  bg-base-100 text-slate-400 bg-gradient-to-t from-black via-slate-800 to-gray-900">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -57,18 +57,16 @@ const Navbar = () => {
                 </div>
                 <div className="form-control flex justify-center ">
                     <label className="label cursor-pointer">
-                        <span className="label-text"><small>light</small></span>
                         <input type="checkbox" className="toggle" checked />
-                        <span className="label-text"><small>dark</small></span>
                     </label>
                 </div>
                 <div className="navbar-end">
                     {user?.uid ?
                         <>
                             <img title={user.displayName} className="w-8 h-8 rounded-xl mr-2" src={user?.photoURL} ></img>
-                            <button onClick={() => logOut()} className="btn-small p-2 rounded-lg bg-yellow-400 text-black lg:mr-3">Log Out</button>
+                            <button onClick={() => logOut()} className="btn-small px-3 py-1  rounded-lg bg-yellow-400 text-black lg:mr-3">Log Out</button>
                         </> :
-                        <Link to='/login' className="btn-small p-2 rounded-lg bg-lime-300 text-black lg:mr-3">Log In</Link>
+                        <Link to='/login' className="btn-small px-3 py-1 rounded-lg bg-lime-300 text-black lg:mr-3">Log In</Link>
                     }
 
 

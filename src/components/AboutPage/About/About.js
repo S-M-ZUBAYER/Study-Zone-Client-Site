@@ -3,7 +3,7 @@ import React from 'react';
 const About = () => {
     return (
         <div>
-            <section class="bg-white">
+            <section class="bg-white text-slate-300 bg-gradient-to-t from-black via-slate-800 to-gray-900">
                 <div class="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
                     <div class="mx-auto max-w-xl text-center">
                         <h2 class="text-4xl font-bold tracking-tight sm:text-5xl">
