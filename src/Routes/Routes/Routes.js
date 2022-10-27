@@ -28,12 +28,12 @@ export const routes = createBrowserRouter([
             },
             {
                 path: '/home',
-                loader: () => fetch('http://localhost:5000/courses'),
+                loader: () => fetch('https://study-zone-server-site.vercel.app/courses'),
                 element: <Home></Home>
             },
             {
                 path: '/courses',
-                loader: () => fetch('http://localhost:5000/courses'),
+                loader: () => fetch('https://study-zone-server-site.vercel.app/courses'),
                 element: <Courses></Courses>
             },
             {
@@ -62,12 +62,12 @@ export const routes = createBrowserRouter([
             },
             {
                 path: '/courses/:id',
-                loader: ({ params }) => fetch(`http://localhost:5000/courses/${params.id}`),
+                loader: ({ params }) => fetch(`https://study-zone-server-site.vercel.app/courses/${params.id}`),
                 element: <CourseDetails></CourseDetails>
             },
             {
                 path: '/items/:course_id',
-                loader: ({ params }) => fetch(`http://localhost:5000/items/${params.course_id}`),
+                loader: ({ params }) => fetch(`https://study-zone-server-site.vercel.app/items/${params.course_id}`),
                 element: <PrivateRoutes><CheckOut></CheckOut></PrivateRoutes>,
 
             }
