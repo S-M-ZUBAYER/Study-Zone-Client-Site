@@ -44,8 +44,8 @@ const CourseDetails = () => {
                     </div>
                 </div>
             </section>
-            <div className="grid grid-cols-3 md:grid-cols-2 sm:grid-cols-1 sm:flex-col-reverse mx-5 py-10 px-10">
-                <div className="col-span-2 md:col-span-1">
+            <div className="grid grid-cols-3 md:grid-cols-2 sm:grid-cols-1 sm:flex-col-reverse mx-5 py-10  px-10 sm:px-2">
+                <div className="lg:col-span-2 md:col-span-1">
                     <h2 className="text-lime-700 text-3xl mb-2 font-bold">Description</h2>
                     {descriptionPera.map(pera => <p>{pera}</p>)}
                     <h2 className="text-green-800 text-3xl mb-2 mt-5 font-bold">What We Learn</h2>
@@ -76,7 +76,7 @@ const CourseDetails = () => {
 
                         <div className="relative text-center">
                             <h3
-                                className="text-2xl my-3 text-amber-500 font-bold uppercase tracking-wider text-white sm:text-3xl"
+                                className="text-2xl my-3 text-amber-500 font-bold uppercase tracking-wider text-white sm:text-lg"
                             ><span className="text-white">Price: {price} $</span> <br />
                                 Save
                                 <span
@@ -84,7 +84,7 @@ const CourseDetails = () => {
                                 >
                                     <span className="relative"> 10% </span>
                                 </span>
-                                on <br /> <span className="text-cyan-500">{name}</span>
+                                on <br /> <span className="text-cyan-500 sm:lg">{name}</span>
                             </h3>
                             <div className="text-start mt-5 font-semibold">
 
@@ -115,10 +115,10 @@ const CourseDetails = () => {
                 </div>
             </div>
             <Link
-                className="flex items-center justify-center rounded-xl mx-10 border-4 border-black bg-gradient-to-t from-red-400 to-amber-200 px-8 py-4 mt-5 font-bold shadow-[6px_6px_0_0_#000] transition hover:shadow-none focus:outline-none focus:ring active:bg-pink-50"
+                className="flex items-center justify-center rounded-xl mx-10 text-black border-4 border-black bg-gradient-to-t from-red-400 to-amber-200 px-8 py-4 mt-5 font-bold shadow-[6px_6px_0_0_#000] transition hover:shadow-none focus:outline-none focus:ring active:bg-pink-50"
                 to={`/items/${course_id}`}
             >
-                Get Premium Access <span aria-hidden="true" className="ml-1.5" role="img">🤔</span>
+                Get Premium Access <span aria-hidden="true" className="ml-1.5 " role="img">🤔</span>
             </Link>
         </div>
     );

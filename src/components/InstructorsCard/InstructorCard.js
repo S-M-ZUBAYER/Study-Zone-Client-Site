@@ -4,7 +4,7 @@ import { FaStar, FaStarHalfAlt } from 'react-icons/fa';
 const InstructorCard = ({ img, name, rating, reviews, quality }) => {
     const skills = quality.split('$');
     return (
-        <div>
+        <div className="sm:">
             <div className="flex max-w-md overflow-hidden bg-white rounded-lg shadow-lg dark:bg-gray-800">
                 <div className="w-full bg-cover" style={{ backgroundImage: `url(${img})` }}></div>
 
