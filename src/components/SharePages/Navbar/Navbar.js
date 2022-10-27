@@ -55,11 +55,7 @@ const Navbar = () => {
                         <li><Link to='contact'>Contact</Link></li>
                     </ul>
                 </div>
-                <div className="form-control flex justify-center ">
-                    <label className="label cursor-pointer">
-                        <input type="checkbox" className="toggle" checked />
-                    </label>
-                </div>
+                <input type="checkbox" className="toggle toggle-sm ml-10" checked />
                 <div className="navbar-end">
                     {user?.uid ?
                         <>

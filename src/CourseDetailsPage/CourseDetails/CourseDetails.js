@@ -3,8 +3,12 @@ import { Link, useLoaderData } from 'react-router-dom';
 import { FaStar, FaStarHalfAlt } from 'react-icons/fa';
 import InstructorCard from '../../components/InstructorsCard/InstructorCard';
 import DownloadBtn from '../DownloadBtn/DownloadBtn';
+import ReactPrint from 'react-to-print'
+import { useRef } from 'react';
+
 
 const CourseDetails = () => {
+    const ref = useRef()
     const course = useLoaderData();
     const { name, Duration, author_name, img, last_update, rating, Enrolled, price, reviews, description, author_img, quality, requirements, course_id } = course;
     const descriptionPera = description.split('$');
@@ -44,8 +48,8 @@ const CourseDetails = () => {
                     </div>
                 </div>
             </section>
-            <div className="grid grid-cols-3 md:grid-cols-2 sm:grid-cols-1 sm:flex-col-reverse mx-5 py-10  px-10 sm:px-2">
-                <div className="lg:col-span-2 md:col-span-1">
+            <div className="grid grid-cols-3 md:grid-cols-2 sm:grid-cols-1 sm:flex-col-reverse mx-5 py-10 px-10">
+                <div className="col-span-2 md:col-span-1">
                     <h2 className="text-lime-700 text-3xl mb-2 font-bold">Description</h2>
                     {descriptionPera.map(pera => <p>{pera}</p>)}
                     <h2 className="text-green-800 text-3xl mb-2 mt-5 font-bold">What We Learn</h2>
@@ -57,7 +61,7 @@ const CourseDetails = () => {
 
                 </div>
                 <div className="col-span-1 mt-[-200px]">
-                    <div
+                    <div ref={ref}
                         className="relative bg-[url(https://images.unsplash.com/photo-1550291652-6ea9114a47b1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80)] bg-cover bg-center bg-no-repeat px-4 pb-4 pt-56 sm:px-6 sm:pb-6 sm:pt-64" style={{ backgroundImage: `url(${img})` }}
                     >
                         <span className="absolute inset-0 bg-gray-900/25"></span>
@@ -70,13 +74,13 @@ const CourseDetails = () => {
                         <strong
                             className="absolute top-4 right-0 py-1.5 px-3 text-xs uppercase tracking-wider text-black"
                         >
-                            <DownloadBtn></DownloadBtn>
+                            <ReactPrint trigger={() => <button>Download</button>} content={() => ref.current} />
                         </strong>
 
 
                         <div className="relative text-center">
                             <h3
-                                className="text-2xl my-3 text-amber-500 font-bold uppercase tracking-wider text-white sm:text-lg"
+                                className="text-2xl my-3 text-amber-500 font-bold uppercase tracking-wider text-white sm:text-3xl"
                             ><span className="text-white">Price: {price} $</span> <br />
                                 Save
                                 <span
@@ -84,7 +88,7 @@ const CourseDetails = () => {
                                 >
                                     <span className="relative"> 10% </span>
                                 </span>
-                                on <br /> <span className="text-cyan-500 sm:lg">{name}</span>
+                                on <br /> <span className="text-cyan-500">{name}</span>
                             </h3>
                             <div className="text-start mt-5 font-semibold">
 

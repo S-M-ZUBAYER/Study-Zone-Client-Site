@@ -33,7 +33,7 @@ const LogIn = () => {
                     navigate(from, { replace: true });
                 }
                 else {
-                    // toast.error("Your Email wasn't verified. please verify first!!!")
+                    toast.error("Your Email wasn't verified. please verify first!!!")
                 }
 
             })
@@ -50,12 +50,12 @@ const LogIn = () => {
             .then((result) => {
                 const user = result.user;
                 console.log(user)
-                toast.success('Log In successfully')
+                toast('Log In successfully')
                 if (user?.uid) {
                     navigate(from, { replace: true });
                 }
                 else {
-                    // toast.error("Your Email wasn't verified. please verify first!!!")
+                    toast("register firest")
                 }
             })
             .catch(error => console.error(error))
