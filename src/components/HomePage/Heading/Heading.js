@@ -16,30 +16,29 @@ const Heading = () => {
                     className="relative mx-auto max-w-screen-xl px-4 py-32 sm:px-6 lg:flex lg:h-screen lg:items-center lg:px-8"
                 >
                     <div className="max-w-xl text-center sm:text-left">
-                        <h1 className="text-3xl font-extrabold sm:text-5xl">
-                            Let us find your
+                        <h1 className="text-3xl font-extrabold text-lime-700 sm:text-5xl">
+                            Welcome To Our
 
-                            <strong className="block font-extrabold text-rose-700">
-                                Forever Home.
+                            <strong className="block font-extrabold text-yellow-500">
+                                Study Zone Platform.
                             </strong>
                         </h1>
 
-                        <p className="mt-4 max-w-lg sm:text-xl sm:leading-relaxed">
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt illo
-                            tenetur fuga ducimus numquam ea!
+                        <p className="mt-4 max-w-lg sm:text-xl text-cyan-800 sm:leading-relaxed">
+                            Welcome to learn modern technology, and set your bright future...
                         </p>
 
                         <div className="mt-8 flex flex-wrap gap-4 text-center">
                             <Link
                                 to='/login'
-                                className="block w-full rounded bg-rose-600 px-12 py-3 text-sm font-medium text-white shadow hover:bg-rose-700 focus:outline-none focus:ring active:bg-rose-500 sm:w-auto"
+                                className="block w-full rounded bg-gradient-to-t from-black via-purple-900 to-violet-600 bg-rose-600 px-12 py-3 text-sm font-medium text-white shadow hover:bg-rose-700 focus:outline-none focus:ring active:bg-rose-500 sm:w-auto"
                             >
                                 Log In
                             </Link>
 
                             <Link
                                 to='/register'
-                                className="block w-full rounded bg-white px-12 py-3 text-sm font-medium text-rose-600 shadow hover:text-rose-700 focus:outline-none focus:ring active:text-rose-500 sm:w-auto"
+                                className="block w-full rounded bg-white px-12 py-3 text-sm font-medium bg-gradient-to-t from-red-200  to-orange-400 text-black shadow hover:text-rose-700 focus:outline-none focus:ring active:text-rose-500 sm:w-auto"
                             >
                                 Register
                             </Link>
