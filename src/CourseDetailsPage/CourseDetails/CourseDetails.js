@@ -41,8 +41,8 @@ const CourseDetails = () => {
                     </div>
                 </div>
             </section>
-            <div className="grid grid-cols-3 mx-5 py-10 px-10">
-                <div className="col-span-2">
+            <div className="grid grid-cols-3 md:grid-cols-2 sm:grid-cols-1 sm:flex-col-reverse mx-5 py-10 px-10">
+                <div className="col-span-2 md:col-span-1">
                     <h2 className="text-lime-700 text-3xl mb-2 font-bold">Description</h2>
                     {descriptionPera.map(pera => <p>{pera}</p>)}
                     <h2 className="text-green-800 text-3xl mb-2 mt-5 font-bold">What We Learn</h2>

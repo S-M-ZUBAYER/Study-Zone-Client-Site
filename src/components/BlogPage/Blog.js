@@ -2,83 +2,34 @@ import React from 'react';
 
 const Blog = () => {
     return (
-        <div>
-            <section className="bg-white dark:bg-gray-900">
-                <div className="container px-6 py-10 mx-auto">
-                    <h1 className="text-3xl font-semibold text-gray-800 capitalize lg:text-4xl dark:text-white">From the blog</h1>
+        <div className="bg-gradient-to-t from-black via-slate-800 to-gray-900">
+            <section className="dark:dark:bg-gray-800 text-slate-300 dark:dark:text-gray-100 ">
+                <div className="container flex flex-col justify-center px-4 py-8 mx-auto md:p-8">
+                    <h2 className="text-2xl text-center font-semibold sm:text-4xl">Try to familiar with some Topics</h2>
+                    <p className="mt-4 mb-12 text-center dark:dark:text-gray-400 text-lg font-semibold mx-[10%]">We all want to expand on our existing knowledge. But sometimes it's impossible to stay consistent with a new skill or habit. It's easy to fall into the trap where you focus only on learning and never get around to implementing the information.</p>
+                    <div className="space-y-4 sm:mx-5">
+                        <details className="w-full border rounded-lg bg-slate-700" open="">
+                            <summary className="text-lg font-semibold px-4 py-6 focus:outline-none font focus-visible:ring-violet-400"><span className="font-bold text-orange-400">Question: </span> what is cors?</summary>
+                            <p className="text-start text-base font-semibold px-4 py-6 pt-0 ml-4 -mt-4 dark:dark:text-gray-400">Cross-origin resource sharing (CORS) is a browser mechanism that allows a web page to use assets and data from other pages or domains. <br /> Most sites need to use resources and images to run their scripts. These embedded assets present a security risk as the assets could contain viruses or allow server access to a hacker <br /> <span className="font-bold text-white">Security policies</span>  mitigate the security risks of asset use. The policy rules what assets a requesting site can load based on origin or contents and regulates the amount of access given to the requesting site. Each policy must have enough restrictions to secure the web server but not enough to hurt functionality.<br /><span className="font-bold text-white">Same-origin</span>  is the most secure type of policy that prevents access to any outside server. All assets for a site must come from the same origin. Most of the time, same-origin is a good choice as most scripts can function with only local resources. However, sometimes we’ll want to allow access to outside assets such as videos, live-streams, or pictures. <br />Many sites use a form of cross-origin policy called cross-origin resource sharing (CORS) that defines a way for a web page and the host server to interact and determine if it is safe for the server to allow access to the web page.</p>
+                        </details>
+                        <details className="w-full border rounded-lg bg-slate-700" open="">
+                            <summary className=" text-lg font-semibold px-4 py-6 focus:outline-none focus-visible:ring-violet-400"><span className="font-bold text-orange-400">Question: </span>Why are you using firebase? What other options do you have to implement authentication?</summary>
+                            <p className="text-start text-base font-semibold px-4 py-6 pt-0 ml-4 -mt-4 dark:dark:text-gray-400"><span className="font-bold text-lg">Reason To use Firebase:</span><br />A real-time Database is a cloud-hosted database. Data is stored as JSON and synchronized continuously to each associated client. When you build cross-platform applications with iOS, Android, and JavaScript SDKs, the greater part of your customers’ demand is based on one Realtime Database instance and consequently getting updates with the most current data.<br />Hosting is production-grade web content that facilities the developers. With Hosting, you can rapidly and effectively send web applications and static content to a Content Delivery Network (CDN) with a single command. <br />Firebase Authentication gives back-end development services, simple-to-use SDKs, and instant UI libraries to confirm clients over your application. It supports authentication using passwords, email id, or username. <br />It helps to create detailed reports of the errors which are assembled into groups of comparative stack flow triaged by the severity of effect on users. In addition to automatic reports, you can register custom events to help capture the steps which lead to a crash. <br />They are the smart URLs that dynamically change behavior to provide the best experience across various platforms. You can use it in web, email, social media, referral, or any promotions to increase user acquisition, maintenance, and value to Gain end-to-end understanding into all your development channels through analytics on the Firebase console. and so on the reason to use firebase. </p><span className="font-bold text-lg">Other:</span><br /> Create our own Authentication system by ourselves. Also we can use different Database such as mongoDB, Mysql And so on . By use this Database we can build authentication system.
+                        </details>
+                        <details className="w-full border rounded-lg bg-slate-700" open="">
+                            <summary className="text-lg font-semibold px-4 py-6 focus:outline-none focus-visible:ring-violet-400"><span className="font-bold text-orange-400">Question: </span> How does the private route work?</summary>
+                            <p className="text-start text-base font-semibold px-4 py-6 pt-0 ml-4 -mt-4 dark:dark:text-gray-400">The react private route component renders a route component if the user is logged in and in an authorised role for the route, if the user isn’t logged in they’re redirected to the /login page, if the user is logged in but aren’t in an authorised role they’re redirected to the home page. </p>
+                        </details>
+                        <details className="w-full border rounded-lg bg-slate-700" open="">
+                            <summary className="text-lg font-semibold px-4 py-6 focus:outline-none focus-visible:ring-violet-400"><span className="font-bold text-orange-400">Question: </span>What is Node? How does Node work?</summary>
+                            <p className="text-start text-base font-semibold px-4 py-6 pt-0 ml-4 -mt-4 dark:dark:text-gray-400"><span className="font-bold text-lg">Node:</span><br /> Node.js is a single-threaded, cross-platform runtime environment built on Chrome’s V8 JavaScript engine. It is open-source software to build real-time and scalable network applications. <br />Node.js is a JavaScript runtime used to create scalable server-side and networking applications via virtual private servers. It offers non-blocking input/output (I/O) operations and is built on event-driven, asynchronous architecture to help developers create various projects efficiently and easily. <br /><span className="font-bold text-lg">Way to Work:</span> <br /><br />Compared to other platforms, Node.js has a particular workflow. It operates as a single process, which means it doesn’t create a new thread for every request. A thread is a set of instructions that need to be performed by the server.
 
-                    <div className="grid grid-cols-1 gap-8 mt-8 md:mt-16 md:grid-cols-2">
-                        <div className="lg:flex">
-                            <img className="object-cover w-full h-56 rounded-lg lg:w-64" src="https://images.unsplash.com/photo-1515378960530-7c0da6231fb1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="" />
+                                Node.js employs non-blocking I/O operations – when a client sends a request to the web server, the single-threaded event loop picks it up and sends it to a worker thread for processing.
 
-                            <div className="flex flex-col justify-between py-6 lg:mx-6">
-                                <a href="#" className="text-xl font-semibold text-gray-800 hover:underline dark:text-white ">
-                                    How to use sticky note for problem solving
-                                </a>
+                                Instead of blocking the thread and wasting CPU resources by waiting for a response, Node.js will continue working on the next task. This way, it can handle a massive amount of concurrent requests.
 
-                                <span className="text-sm text-gray-500 dark:text-gray-300">On: 20 October 2019</span>
-                            </div>
-                        </div>
-
-                        <div className="lg:flex">
-                            <img className="object-cover w-full h-56 rounded-lg lg:w-64" src="https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="" />
-
-                            <div className="flex flex-col justify-between py-6 lg:mx-6">
-                                <a href="#" className="text-xl font-semibold text-gray-800 hover:underline dark:text-white ">
-                                    How to use sticky note for problem solving
-                                </a>
-
-                                <span className="text-sm text-gray-500 dark:text-gray-300">On: 20 October 2019</span>
-                            </div>
-                        </div>
-
-                        <div className="lg:flex">
-                            <img className="object-cover w-full h-56 rounded-lg lg:w-64" src="https://images.unsplash.com/photo-1544654803-b69140b285a1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="" />
-
-                            <div className="flex flex-col justify-between py-6 lg:mx-6">
-                                <a href="#" className="text-xl font-semibold text-gray-800 hover:underline dark:text-white ">
-                                    Morning routine to boost your mood
-                                </a>
-
-                                <span className="text-sm text-gray-500 dark:text-gray-300">On: 25 November 2020</span>
-                            </div>
-                        </div>
-
-                        <div className="lg:flex">
-                            <img className="object-cover w-full h-56 rounded-lg lg:w-64" src="https://images.unsplash.com/photo-1530099486328-e021101a494a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1547&q=80" alt="" />
-
-                            <div className="flex flex-col justify-between py-6 lg:mx-6">
-                                <a href="#" className="text-xl font-semibold text-gray-800 hover:underline dark:text-white ">
-                                    All the features you want to know
-                                </a>
-
-                                <span className="text-sm text-gray-500 dark:text-gray-300">On: 30 September 2020</span>
-                            </div>
-                        </div>
-
-                        <div className="lg:flex">
-                            <img className="object-cover w-full h-56 rounded-lg lg:w-64" src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1484&q=80" alt="" />
-
-                            <div className="flex flex-col justify-between py-6 lg:mx-6">
-                                <a href="#" className="text-xl font-semibold text-gray-800 hover:underline dark:text-white ">
-                                    Minimal workspace for your inspirations
-                                </a>
-
-                                <span className="text-sm text-gray-500 dark:text-gray-300">On: 13 October 2019</span>
-                            </div>
-                        </div>
-
-                        <div className="lg:flex">
-                            <img className="object-cover w-full h-56 rounded-lg lg:w-64" src="https://images.unsplash.com/photo-1624996379697-f01d168b1a52?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="" />
-
-                            <div className="flex flex-col justify-between py-6 lg:mx-6">
-                                <a href="#" className="text-xl font-semibold text-gray-800 hover:underline dark:text-white ">
-                                    What do you want to know about Blockchane
-                                </a>
-
-                                <span className="text-sm text-gray-500 dark:text-gray-300">On: 20 October 2019</span>
-                            </div>
-                        </div>
+                                That said, Node.js is not suitable for CPU-intensive tasks as they could prevent the main thread from handling other requests, effectively blocking it.  </p>
+                        </details>
                     </div>
                 </div>
             </section>
